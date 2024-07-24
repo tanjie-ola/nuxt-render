@@ -1,13 +1,14 @@
 <script setup lang="jsx">
 import { reactive } from 'vue'
 import Render from './Render.vue'
+import {Tag as ATag} from '@arco-design/web-vue'
 const originColumns = [
   {
     title: 'Name',
     dataIndex: 'name',
     width: 200,
     render({ record }) {
-      return <a-tag>{record.name}</a-tag>
+      return h(ATag, record.name)
     },
   },
   {
@@ -27,7 +28,7 @@ const originColumns = [
     dataIndex: 'email',
     width: 200,
     render({ record }) {
-      return <a-tag>{record.email}</a-tag>
+      return h(ATag, record.email)
     },
   },
 ]
@@ -75,7 +76,7 @@ const item={
     dataIndex: 'email',
     width: 200,
     render({ record }) {
-      return <a-tag>{record.email}</a-tag>
+      return h(ATag, record.email)
     },
   }
   const form={
