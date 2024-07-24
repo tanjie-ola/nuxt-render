@@ -1,4 +1,5 @@
 <script setup lang="jsx">
+import {Tag as ATag} from '@arco-design/web-vue'
 import { reactive } from 'vue'
 import Render from './Render.vue'
 const originColumns = [
@@ -7,7 +8,7 @@ const originColumns = [
     dataIndex: 'name',
     width: 200,
     render({ record }) {
-      return <a-tag>{record.name}</a-tag>
+      return h(ATag, {}, record.name)
     },
   },
   {
