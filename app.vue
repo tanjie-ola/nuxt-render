@@ -8,7 +8,7 @@ const originColumns = [
     dataIndex: 'name',
     width: 200,
     render({ record }) {
-      return h(ATag, {}, record.name)
+      return <a-tag>{record.name}</a-tag>
     },
   },
   {
@@ -28,7 +28,8 @@ const originColumns = [
     dataIndex: 'email',
     width: 200,
     render({ record }) {
-      return <a-tag>{record.email}</a-tag>
+      
+      return h(ATag, {}, record.email)
     },
   },
 ]
